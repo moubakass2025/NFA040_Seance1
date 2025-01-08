@@ -1,1 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableaux et Liste Complexes</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        .nested-table {
+            border: none;
+            width: 100%;
+        }
+        .nested-table td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Partie 1 : Tableau à 6 cases</h1>
+    <table>
+        <tr>
+            <td>Case 1</td>
+            <td>Case 2</td>
+            <td>Case 3</td>
+        </tr>
+        <tr>
+            <td>Case 4</td>
+            <td>Case 5</td>
+            <td>Case 6</td>
+        </tr>
+    </table>
+
+    <h1>Partie 2 : Liste avec sous-points</h1>
+    <ol>
+        <li>
+            Premier point
+            <ul>
+                <li>Rubrique 1</li>
+                <li>Rubrique 2</li>
+            </ul>
+        </li>
+        <li>Deuxième point</li>
+        <li>
+            Troisième point
+            <ul>
+                <li>Rubrique 1</li>
+                <li>Rubrique 2</li>
+            </ul>
+        </li>
+    </ol>
+
+    <h1>Partie 3 : Tableau complexe</h1>
+    <table>
+        <tr>
+            <td>Colonne 1</td>
+            <td>Colonne 2</td>
+            <td>Colonne 3</td>
+            <td>Colonne 4</td>
+        </tr>
+        <tr>
+            <td rowspan="3">Ligne inférieure Colonne 1</td>
+            <td>
+                <!-- Sous-division colonne 2 -->
+                <table class="nested-table">
+                    <tr><td>Ligne 1</td></tr>
+                    <tr><td>Ligne 2</td></tr>
+                    <tr><td>Ligne 3</td></tr>
+                </table>
+            </td>
+            <td rowspan="3">Ligne inférieure Colonne 3</td>
+            <td>
+                <!-- Sous-division colonne 4 -->
+                <table class="nested-table">
+                    <tr><td>Ligne 1</td></tr>
+                    <tr>
+                        <!-- Ligne 2 divisée en 2 colonnes -->
+                        <td>Petite colonne 1</td>
+                        <td>Petite colonne 2</td>
+                    </tr>
+                    <tr><td colspan="2">Ligne 3</td></tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
 
